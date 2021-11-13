@@ -1,5 +1,7 @@
 package com.firststrpsspring.demo.entity;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,11 +10,14 @@ import javax.persistence.Id;
 @Entity
 public class Post {
 
+    @Value("${upload.path}")
+    private String path;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String title, anons, full_text;
+    private String title, anons, full_text, image;
     private int views;
 
     public Post(String title, String anons, String full_text) {
@@ -39,6 +44,14 @@ public class Post {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getAnons() {

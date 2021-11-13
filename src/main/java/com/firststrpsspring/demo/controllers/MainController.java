@@ -3,13 +3,18 @@ package com.firststrpsspring.demo.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
 
+    @GetMapping("/")
+    public String home1(Model model) {
+        model.addAttribute("title", "ShoiStore");
+        return "home";
+    }
+
     @GetMapping("/home")
-    public String home(Model model) {
+    public String home2(Model model) {
         model.addAttribute("title", "Главная страница");
         return "home";
     }
@@ -18,5 +23,11 @@ public class MainController {
     public String about(Model model) {
         model.addAttribute("title", "about section");
         return "blog-main";
+    }
+
+    @GetMapping("/sign-in")
+    public String signIN(Model model) {
+        model.addAttribute("title", "about section");
+        return "/sign-in";
     }
 }
