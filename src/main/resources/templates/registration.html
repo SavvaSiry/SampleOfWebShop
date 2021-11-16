@@ -8,17 +8,14 @@
 <header th:insert="blocs/header :: header"></header>
 
 <div class="container col-xs-6 col-md-4 mt-5" style="width: 400px">
-    <main class="form-signin">
-        <div th:if="${param.error}">
-            Invalid username and password.
-        </div>
-        <div th:if="${param.logout}">
-            You have been logged out.
-        </div>
-        <form th:action="@{/sign-in}" method="post">
-<!--            <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">-->
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
+    <main class="form-signin">
+        <div th:text="${message}">
+        </div>
+
+        <form th:action="@{/registration}" method="post">
+<!--            <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">-->
+            <h1 class="h3 mb-3 fw-normal">Registration</h1>
             <div class="form-floating">
                 <input type="text" name="username" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
@@ -30,7 +27,6 @@
             <button class="w-100 btn btn-lg btn-primary" type="submit" value="Sign In">Sign in</button>
             <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
         </form>
-        <a th:href="@{/registration}">Add new user</a>
     </main>
 </div>
 <div class="container">

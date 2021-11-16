@@ -49,9 +49,6 @@ public class BlogController {
         return "blog-details";
     }
 
-/*    @RequestMapping(value = "blog/add",
-    method = RequestMethod.POST,
-    consumes = MediaType.MULTIPART_FORM_DATA_VALUE)*/
     @PostMapping("blog/add")
     public String blogPostAdd(@RequestParam String title,
                               @RequestParam String anons,
@@ -73,5 +70,4 @@ public class BlogController {
         postRepository.save(post);
         return "redirect:/blog";
     }
-
 }

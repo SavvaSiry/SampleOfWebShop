@@ -25,9 +25,9 @@ public class MainController {
         return "blog-main";
     }
 
-    @GetMapping("/sign-in")
+/*    @GetMapping("/sign-in")
     public String signIN(Model model) {
         model.addAttribute("title", "about section");
         return "/sign-in";
-    }
+    }*/
 }
