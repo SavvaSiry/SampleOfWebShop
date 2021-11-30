@@ -8,6 +8,6 @@ This is a sample of a basic online store implemented with `Spring Boot + (Thymle
 ## Authorization
 ![Sample2](/readme/img_2.png "Sample")
 
-## BasikSlider
+## Basik Slider
 ![Sample1](/readme/img_1.png "Sample")
 
