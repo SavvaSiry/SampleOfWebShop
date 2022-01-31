@@ -52,10 +52,10 @@ public class BlogController {
     @PostMapping("blog/add")
     public String blogPostAdd(@RequestParam String title,
                               @RequestParam String anons,
-                              @RequestParam String full_text,
+                              @RequestParam String fullText,
                               @RequestParam("file") MultipartFile file,
                               Model model) throws IOException {
-        Post post = new Post(title, anons, full_text);
+        Post post = new Post(title, anons, fullText);
         if (file != null) {
             File uploadDir = new File(uploadPath);
             if (!uploadDir.exists()){

@@ -11,7 +11,7 @@
     <div class="container">
         <div class="col" th:each="el : ${post}">
             <div class="card shadow-sm">
-                <img th:src="'./images/bienes/' + ${el.image}">
+                <img th:src="'/images/bienes/' + ${el.image}">
                 <div class="card-body">
                     <p class="card-text" th:text="${el.title}"></p>
                     <div class="d-flex justify-content-between align-items-center">
