@@ -1,4 +1,5 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');*/
+/*
+!*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');*!
 
 body {
     font-family: "Poppins", sans-serif;
@@ -33,6 +34,7 @@ a:hover {
 
 .section-products .single-product {
     margin-bottom: 26px;
+    background-size: cover;
 }
 
 .section-products .single-product .part-1 {
@@ -61,7 +63,11 @@ a:hover {
 .section-products #product-1 .part-1::before {
     background: url("https://i.ibb.co/L8Nrb7p/1.jpg") no-repeat center;
     background-size: cover;
-    transition: all 0.3s;
+}
+
+.section-products #product-1 .part-1::before {
+    background: url("https://i.ibb.co/L8Nrb7p/1.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .section-products #product-2 .part-1::before {
@@ -135,7 +141,7 @@ a:hover {
 
 .section-products .single-product .part-2 .product-title {
     color: #fe302f;
-    font-size: 1rem;        
+    font-size: 1rem;
 }
 
 .section-products .single-product .part-2 h4 {
@@ -159,4 +165,9 @@ a:hover {
     height: 1px;
     background-color: #444444;
     transform: translateY(-50%);
+}
+*/
+
+.card:hover {
+    border: 1px solid #181818;
 }

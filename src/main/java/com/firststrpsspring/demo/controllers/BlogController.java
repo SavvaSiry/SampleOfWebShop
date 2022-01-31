@@ -4,7 +4,6 @@ import com.firststrpsspring.demo.entity.Post;
 import com.firststrpsspring.demo.repo.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -52,10 +51,10 @@ public class BlogController {
     @PostMapping("blog/add")
     public String blogPostAdd(@RequestParam String title,
                               @RequestParam String anons,
-                              @RequestParam String fullText,
+                              @RequestParam String full_text,
                               @RequestParam("file") MultipartFile file,
                               Model model) throws IOException {
-        Post post = new Post(title, anons, fullText);
+        Post post = new Post(title, anons, full_text);
         if (file != null) {
             File uploadDir = new File(uploadPath);
             if (!uploadDir.exists()){

@@ -9,18 +9,69 @@
 
 <div class="album py-5 bg-light mt-5">
     <div class="container">
-        <div class="col" th:each="el : ${post}">
-            <div class="card shadow-sm">
-                <img th:src="'/images/bienes/' + ${el.image}">
-                <div class="card-body">
-                    <p class="card-text" th:text="${el.title}"></p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <small class="text-muted" th:text="${el.anons}"></small>
+        <div class="" th:each="el : ${post}">
+            <div class="d-flex justify-content-between">
+                <!--                Меню слева с картинками-->
+                <div class="d-flex flex-column justify-content-between col-1">
+                    <img class="" th:src="'/images/bienes/' + ${el.image}">
+                    <img class="" th:src="'/images/bienes/' + ${el.image}">
+                    <img class="" th:src="'/images/bienes/' + ${el.image}">
+                    <img class="" th:src="'/images/bienes/' + ${el.image}">
+                    <img class="" th:src="'/images/bienes/' + ${el.image}">
+                </div>
+                <!--                Центральная картинка-->
+                <img class="col-6" th:src="'/images/bienes/' + ${el.image}">
+                <!--                Описание товара-->
+                <div class="col-4">
+                    <!--                    Описание-->
+                    <div class="d-flex justify-content-between">
+                        <div class="fs-4" th:text="${el.title}"></div>
+                        <div class="fs-4" th:text="${el.full_text}"></div>
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a th:href="'/blog/' + ${el.id} + 'edit'" type="button" class="btn btn-sm btn-outline-secondary">Редактировать</a>
-                            <a th:href="'/blog/' + ${el.id} + 'remove'" type="button" class="btn btn-sm btn-outline-secondary">Удалить</a>
+                        <small class="text-muted fs-5" th:text="${el.anons}"></small>
+                    </div>
+                    <!--                    Размеры-->
+                    <div class="d-flex flex-wrap mt-4">
+                        <div class="border fs-6 text-center border-1 p-2 mt-2 ms-1" style="width: 80px; height: 40px">
+                            37.5 EU
+                        </div>
+                        <div class="border fs-6 text-center border-1 p-2 mt-2 ms-1" style="width: 80px; height: 40px">37
+                            EU
+                        </div>
+                        <div class="border fs-6 text-center border-1 p-2 mt-2 ms-1" style="width: 80px; height: 40px">
+                            37.5 EU
+                        </div>
+                        <div class="border fs-6 text-center border-1 p-2 mt-2 ms-1" style="width: 80px; height: 40px">37
+                            EU
+                        </div>
+                        <div class="border fs-6 text-center border-1 p-2 mt-2 ms-1" style="width: 80px; height: 40px">
+                            37.5 EU
+                        </div>
+                    </div>
+                    <!--                    Таблица размеров-->
+                    <div class="mt-6">
+                        <a href="#" class="link-primary dropdown ">Таблица размеров</a>
+                    </div>
+                    <!--                    Цвета модели-->
+                    <div class="dropdown mt-4">
+                        <button class="btn btn-secondary dropdown-toggle col-12" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            Цвет
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Красный</a></li>
+                            <li><a class="dropdown-item" href="#">Синий</a></li>
+                            <li><a class="dropdown-item" href="#">Зеленный</a></li>
+                        </ul>
+                    </div>
+                    <!--                   Кнопки в корзину-->
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <div class="btn-group col-12">
+                            <a th:href="'/blog/' + ${el.id} + 'edit'" type="button"
+                               class="btn btn-sm btn-outline-secondary">Добавить в корзину</a>
+                            <a th:href="'/blog/' + ${el.id} + 'remove'" type="button"
+                               class="btn btn-sm btn-outline-secondary">Заказать в один клик</a>
                         </div>
                     </div>
                 </div>
